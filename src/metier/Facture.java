@@ -2,8 +2,14 @@ package metier;
 
 import java.time.LocalDate;
 
+
 public class Facture
 {
+	private Client client;
+	private int montant;
+	private boolean estreglee;
+	private LocalDate date;
+	
 	/**
 	 * Retourne le client à qui est adressée la facture..
 	 * @return le client.
@@ -11,7 +17,7 @@ public class Facture
 	
 	public Client getClient()
 	{
-		return null;
+		return this.client;
 	}
 
 	/**
@@ -21,7 +27,7 @@ public class Facture
 	
 	public int getMontant()
 	{
-		return 0;
+		return this.montant;
 	}
 
 	/**
@@ -29,8 +35,9 @@ public class Facture
 	 * @return vrai ssi la facture est reglée.
 	 */
 	
-	public boolean estReglee()
+	public boolean estReglee(boolean estreglee)
 	{
+		this.estreglee = estreglee;
 		return true;
 	}
 
@@ -41,7 +48,7 @@ public class Facture
 	
 	public LocalDate getDate()
 	{
-		return null;
+		return this.date;
 	}
 
 	/**
