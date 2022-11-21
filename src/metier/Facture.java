@@ -7,9 +7,24 @@ public class Facture
 {
 	private Client client;
 	private int montant;
-	private boolean estreglee;
+	private boolean estReglee;
 	private LocalDate date;
 	
+	public Facture(int montant) {
+		this.montant = montant;
+	}
+
+	public Facture(int montant, boolean reglee) {
+		this.montant = montant;
+		this.estReglee = reglee;
+	}
+	
+	public Facture(Client client,int montant, boolean reglee,LocalDate date) {
+		this.client = client;
+		this.montant = montant;
+		this.estReglee = reglee;
+		this.date = date;
+	}
 	/**
 	 * Retourne le client à qui est adressée la facture..
 	 * @return le client.
@@ -35,10 +50,9 @@ public class Facture
 	 * @return vrai ssi la facture est reglée.
 	 */
 	
-	public boolean estReglee(boolean estreglee)
+	public boolean estReglee(boolean estReglee)
 	{
-		this.estreglee = estreglee;
-		return true;
+		return this.estReglee;
 	}
 
 	/**
@@ -67,6 +81,6 @@ public class Facture
 	
 	public Facture copie()
 	{
-		return null;
+		Facture factureCopie = new Facture(this.client,this.montant,this.estReglee,this.date) ;
 	}
 }
