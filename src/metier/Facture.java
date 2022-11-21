@@ -57,6 +57,7 @@ public class Facture
 	
 	public void delete()
 	{
+		this.client.listeFacture.remove(this);
 	}
 	
 	/**
