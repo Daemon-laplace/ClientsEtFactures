@@ -116,6 +116,6 @@ public class Client
 	
 	public void delete()
 	{
-		
+		listeClient.remove(this);
 	}
 }
