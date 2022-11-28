@@ -7,6 +7,10 @@ public class Client
 {
 	String nom;
 	ArrayList<Facture>listeFacture = new ArrayList<Facture>();
+	ArrayList<Facture>listeFactureReglee = new ArrayList<Facture>();
+	ArrayList<Client>listeClient = new ArrayList<Client>();
+	int sommeFacture = 0;
+	
 	/** 
 	 * Crée un client.
 	 * @param nom le nom du client. 
@@ -14,6 +18,7 @@ public class Client
 	
 	public Client(String nom)
 	{
+		listeClient.add(this);
 		this.nom = nom;
 	}
 
@@ -46,6 +51,8 @@ public class Client
 	public Facture createFacture(int montant)
 	{
 		Facture f1 = new Facture (montant);
+		listeFacture.add(f1);
+		sommeFacture += montant;
 		return f1;
 	}
 	
@@ -56,7 +63,7 @@ public class Client
 
 	public List<Facture> getFactures()
 	{
-		return null;
+		return listeFacture;
 	}
 	
 	/**
@@ -66,7 +73,7 @@ public class Client
 	
 	public int sommeMontants()
 	{
-		return 0;
+		return sommeFacture;
 	}
 
 	/**
@@ -79,6 +86,7 @@ public class Client
 	public Facture createFacture(int montant, boolean reglee)
 	{
 		Facture f1 = new Facture (montant,reglee);
+		listeFactureReglee.add(f1);
 		return f1;
 	}	
 	
@@ -89,7 +97,7 @@ public class Client
 
 	public List<Facture> facturesReglees()
 	{
-		return null;
+		return listeFacture;
 	}
 	
 
@@ -99,7 +107,7 @@ public class Client
 	 */
 	public static List<Client> tous()
 	{
-		return null;
+		return new ArrayList<Client>(listeClient);
 	}
 	
 	/**
@@ -108,5 +116,6 @@ public class Client
 	
 	public void delete()
 	{
+		
 	}
 }
