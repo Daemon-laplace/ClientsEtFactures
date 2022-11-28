@@ -12,6 +12,7 @@ public class Facture
 	
 	public Facture(int montant) {
 		this.montant = montant;
+		this.estReglee = false;
 	}
 
 	public Facture(int montant, boolean reglee) {
@@ -50,7 +51,7 @@ public class Facture
 	 * @return vrai ssi la facture est reglée.
 	 */
 	
-	public boolean estReglee(boolean estReglee)
+	public boolean estReglee()
 	{
 		return this.estReglee;
 	}
