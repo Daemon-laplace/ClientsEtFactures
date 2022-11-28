@@ -10,7 +10,7 @@ public class Facture
 	private boolean estReglee;
 	private LocalDate date;
 	
-	public Facture(int montant) {
+/*	public Facture(int montant) {
 		this.montant = montant;
 		this.estReglee = false;
 	}
@@ -18,7 +18,7 @@ public class Facture
 	public Facture(int montant, boolean reglee) {
 		this.montant = montant;
 		this.estReglee = reglee;
-	}
+	}*/
 	
 	public Facture(Client client,int montant, boolean reglee,LocalDate date) {
 		this.client = client;

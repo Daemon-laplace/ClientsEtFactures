@@ -1,5 +1,6 @@
 package metier;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -50,7 +51,7 @@ public class Client
 	
 	public Facture createFacture(int montant)
 	{
-		Facture f1 = new Facture (montant);
+		Facture f1 = new Facture (this,montant,false,LocalDate.now());
 		listeFacture.add(f1);
 		sommeFacture += montant;
 		return f1;
@@ -85,7 +86,7 @@ public class Client
 	
 	public Facture createFacture(int montant, boolean reglee)
 	{
-		Facture f1 = new Facture (montant,reglee);
+		Facture f1 = new Facture (this,montant,reglee,LocalDate.now());
 		if(reglee) {
 			listeFactureReglee.add(f1);
 		}
