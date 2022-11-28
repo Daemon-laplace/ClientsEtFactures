@@ -81,6 +81,6 @@ public class Facture
 	
 	public Facture copie()
 	{
-		Facture factureCopie = new Facture(this.client,this.montant,this.estReglee,this.date) ;
+		return  new Facture(this.client,this.montant,this.estReglee,this.date) ;
 	}
 }
