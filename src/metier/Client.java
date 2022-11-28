@@ -86,7 +86,9 @@ public class Client
 	public Facture createFacture(int montant, boolean reglee)
 	{
 		Facture f1 = new Facture (montant,reglee);
-		listeFactureReglee.add(f1);
+		if(reglee) {
+			listeFactureReglee.add(f1);
+		}
 		return f1;
 	}	
 	
