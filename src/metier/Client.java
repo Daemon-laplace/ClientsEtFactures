@@ -63,7 +63,7 @@ public class Client
 
 	public List<Facture> getFactures()
 	{
-		return listeFacture;
+		return new ArrayList<Facture>(listeFacture);
 	}
 	
 	/**
@@ -97,7 +97,7 @@ public class Client
 
 	public List<Facture> facturesReglees()
 	{
-		return listeFacture;
+		return new ArrayList<Facture>(listeFactureReglee);
 	}
 	
 
