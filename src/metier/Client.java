@@ -8,7 +8,7 @@ public class Client
 	String nom;
 	ArrayList<Facture>listeFacture = new ArrayList<Facture>();
 	ArrayList<Facture>listeFactureReglee = new ArrayList<Facture>();
-	ArrayList<Client>listeClient = new ArrayList<Client>();
+	static ArrayList<Client>listeClient = new ArrayList<Client>();
 	int sommeFacture = 0;
 	
 	/** 
